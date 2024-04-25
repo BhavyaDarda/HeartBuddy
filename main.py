@@ -74,7 +74,7 @@ def hello_world():
         thr = Thread(target=predicted_voice, args=[text1, text22])
         thr.start()
 
-        return render_template('index.html', text1=text1,org=pv, text2=text2, predict=predicted, text3=text3)
+        return render_template("index.html", text1=text1,org=pv, text2=text2, predict=predicted, text3=text3)
 
     thr = Thread(target=intro_voice)
     thr.start()
