@@ -11,9 +11,10 @@
     <!--custom css-->
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="stylesheet" href="/static/css/form.css">
+    <link rel="stylesheet" href="/static/css/help.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -30,6 +31,11 @@
             <a href="#help">Help</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact Us</a>
+
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
         </nav>
     </header>
     <!--home section design-->
@@ -284,10 +290,28 @@
     <section class="help" id="help">
         <div class="container">
             <div class="box">
-                <h2>Help</h2>
+                <h2>Medical Help and Support Assistance Form</h2>
                 <p class="help-text">
-                    This is a web application that predicts the risk of heart disease based on the patient's medical history.
+                    Please fill out the form below to receive medical help and support. You can also upload your medical reports in PDF, DOCX, or CSV format.
                 </p>
+                <form id="medical-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    
+                    <label for="file">Upload Medical Report (PDF, DOCX, or CSV):</label>
+                    <input type="file" id="file" name="file" accept=".pdf,.docx,.csv" required><br><br>
+                    
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </section>
@@ -304,19 +328,21 @@
 
     <!--contact-->
     <section class="contact" id="contact">
-        <h2 class="heading">Dev<span>elopers</span>
+        <h2 class="heading">Developers</h2>
         <div class="contact-content">
             <div class="contact-box">
+                <img src="path_to_image1.jpg" alt="Bhavya Darda">
                 <p>Bhavya Darda</p>
                 <div class="layer">
                     <h3>Back-End Developer</h3>
                     <p>+91 7073348496 <br>bhavya.darda@bca.christuniversity.in</p>
                 </div>
-           </div>
+            </div>
         </div>
-           
-           <div class="contact-content">
+        
+        <div class="contact-content">
             <div class="contact-box">
+                <img src="path_to_image2.jpg" alt="Suchi Sneh">
                 <p>Suchi Sneh</p>
                 <div class="layer">
                     <h3>Front-End Developer</h3>
@@ -324,35 +350,36 @@
                 </div>
             </div>
         </div>
-
+    
         <div class="contact-content">
             <div class="contact-box">
+                <img src="path_to_image3.jpg" alt="Saanvi">
                 <p>Saanvi</p>
                 <div class="layer">
-                <h3>Presentation Maker</h3>
-                <p><br>+91  <br>saanvi.@bca.christuniversity.in</p>
+                    <h3>Presentation Maker</h3>
+                    <p><br>+91  <br>saanvi.@bca.christuniversity.in</p>
+                </div>
             </div>
         </div>
-
+    
         <div class="contact-content">
             <div class="contact-box">
+                <img src="path_to_image4.jpg" alt="Samridhi Singh">
                 <p>Samridhi Singh</p>
                 <div class="layer">
-                <h3>Back-End Support</h3>
-                <p><br>+91  <br>samridhi.singh@bca.christuniversity.in</p>
+                    <h3>Back-End Support</h3>
+                    <p><br>+91  <br>samridhi.singh@bca.christuniversity.in</p>
+                </div>
             </div>
         </div>
-    </div>
-    </h2>
     </section>
-
+    
     <!--footer design-->
     <div class="footer">
         <div class="footer-text">
-            <p>Copyright © 2024 HeartBuddy. All rights reserved</p>    
+            <p>Copyright © 2024 HeartBuddy.com All rights reserved</p>    
         </div>
         <div class="footer-iconTop">
-            <p>Version 5.3.2</p>
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </div>
