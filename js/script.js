@@ -75,3 +75,34 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+// Menu toggle
+const menuIcon = document.getElementById('menu-icon');
+menuIcon.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
+
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('change', () => {
+    body.classList.toggle('dark-theme');
+});
+
+document.getElementById('medical-form').addEventListener('submit', function(event) {
+  const fileInput = document.getElementById('file');
+  const fileName = fileInput.value;
+  const allowedExtensions = /(\.pdf|\.docx|\.csv)$/i;
+
+  if (!allowedExtensions.exec(fileName)) {
+      alert('Please upload a file with a valid format (PDF, DOCX, CSV).');
+      event.preventDefault();
+      return false;
+  }
+});
+
+document.querySelector('.footer-iconTop a').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
