@@ -1,0 +1,21 @@
+[railway]
+name = "HeartBuddy"
+
+[[services]]
+name = "web"
+image = "python:3.8.10"
+command = "python main.py"
+env = "FLASK_APP=app.py,FLASK_ENV=development,PORT=5000"
+port = 5000
+
+[build]
+builder = "NIXPACKS"
+buildCommand = "pip install -r requirements.txt"
+nixpacksPlan = {"providers"=["python"]}
+
+[deploy]
+numReplicas = 1
+startCommand = "gunicorn app:app"
+sleepApplication = false
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
